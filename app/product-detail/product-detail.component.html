@@ -1,0 +1,133 @@
+<div class="container-fluid mt-3 dic">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row mb-3">
+                <div class="col-md-5 text-center">
+                    <img src="assets/{{filtered.image}}" class="img-fluid mb-3" alt="" />
+
+                </div>
+                <div class="col-md-6 mt-4 mr-6">
+                    <h1 class="h5 d-inline mr-2" class="s">{{filtered.name}}</h1>
+
+
+                    <div class="m-4 ml-5 ">
+                        <span class="font-weight-bold h2 mr-2" class="s">${{filtered.price}}</span>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <div class="d-inline float-left mr-2">
+                            <div class="input-group input-group-sm mw-140">
+                                <button class="btn btn-primary text-white" type="button"
+                                    (click)="removeProduct()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                                      </svg>
+                                </button>
+                                <input type="number" class="form-control" [value]="getProductCount()"readOnly />
+                                <button class="btn btn-primary text-white" type="button"
+                                    (click)="addProduct()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                                      </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-primary mr-2" title="Add to cart"
+                            style="border-Bottom: 2px solid black"
+                            (click)="addProduct()">
+                            Add to cart
+             
+                        </button>
+                        <button type="button" class="btn btn-sm btn-warning mr-2" title="Buy now" (click)="update()">
+                            Buy now
+                        </button>
+                        
+                        <button type="button" class="btn btn-sm btn-outline-secondary" title="Add to wishlist">
+                            +
+                        
+                        </button>
+                    </div>
+                    <div>
+                        <p class="font-weight-bolder mb-2 small">
+                            Product Highlights
+                        </p>
+                        <ul class="small" class='s'>
+                            <li> Handmade</li>
+                            <li>Material: paper,glue</li>
+                            <li>
+                                {{filtered.description}}
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-link active" id="nav-details-tab" data-toggle="tab" href="#nav-details"
+                                role="tab" aria-controls="nav-details" aria-selected="true">
+                                Details
+                            </a>
+
+                            <a class="nav-link" id="nav-faq-tab" data-toggle="tab" href="#nav-faq" role="tab"
+                                aria-controls="nav-faq" aria-selected="false">
+                                Questions and Answers
+                            </a>
+                            <a class="nav-link" id="nav-ship-returns-tab" data-toggle="tab" href="#nav-ship-returns"
+                                role="tab" aria-controls="nav-ship-returns" aria-selected="false">
+                                Shipping & Returns
+                            </a>
+
+                        </div>
+                    </nav>
+                    <div class="tab-content p-3 small" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-details" role="tabpanel"
+                            aria-labelledby="nav-details-tab">
+                            <p>
+                                Quilling is the art of rolled, shaped, and glued paper that results in creating a
+                                unified, decorative design. The name quilling is thought to come from the origin of the
+                                art; birds' feathers, or quills, were used to coil the strips of paper around.
+                            </p>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-faq" role="tabpanel" aria-labelledby="nav-faq-tab">
+                            <dl>
+
+                                <app-question-answer>questions and answers</app-question-answer>
+
+                            </dl>
+                        </div>
+                        <div class="tab-pane fade" id="nav-ship-returns" role="tabpanel"
+                            aria-labelledby="nav-ship-returns-tab">
+                            <p>Your order of 100$ or more gets free standard delivery.</p>
+                            <ul>
+                                <li>Standard delivered 4-5 Business Days</li>
+                                <li>Express delivered 2-4 Business Days</li>
+                            </ul>
+                            <p>
+                                Orders are processed and delivered Monday-Friday (excluding public
+                                holidays)
+                            </p>
+                            <p>
+                                No Returns/Replacements Allowed - Returns or replacements are not
+                                accepted by seller for this product. Cancellation allowed.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="nav-size-chart" role="tabpanel"
+                            aria-labelledby="nav-size-chart-tab">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <app-cart-feature-product></app-cart-feature-product>
+            <app-card-services></app-card-services>
+        </div>
+    </div>
+</div>

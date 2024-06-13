@@ -1,0 +1,66 @@
+<footer>
+
+  <div class="container-fluid bg-dark text-white">
+    <div class="row ">
+      <div class="col-md-3 py-3">
+        <div class="h6">Quilling Artist</div>
+        <hr />
+        <p>
+          Quilling is the art of rolled, shaped, and glued paper that results in creating a unified, decorative design.
+          The name quilling is thought to come from the origin of the art; birds' feathers, or quills, were used to coil
+          the strips of paper around.
+        </p>
+      </div>
+      <div class="col-md-3 py-3">
+        <div class="h6">Products</div>
+        <hr />
+        <ul class="list-group list-group-flush" *ngFor="let cat of sortedCategories">
+          <li class="list-group-item bg-dark text-white border-light">
+            <a routerLink="/category/{{cat}}" class="text-decoration-none text-white stretched-link">
+              {{cat}}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 py-3">
+        <div class="h6">Policy</div>
+        <hr />
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-dark text-white border-light">
+            <a routerLink="/return" class="text-decoration-none text-white stretched-link">
+              Return Policy
+            </a>
+          </li>
+          <li class="list-group-item bg-dark text-white border-light">
+            <a routerLink="/term" class="text-decoration-none text-white stretched-link">
+              Terms Of Use
+            </a>
+          </li>
+          <li class="list-group-item bg-dark text-white border-light">
+            <a routerLink="/security" class="text-decoration-none text-white stretched-link">
+              Security
+            </a>
+          </li>
+          <li class="list-group-item bg-dark text-white border-light">
+            <a routerLink="/privacy" class="text-decoration-none text-white stretched-link">
+              Privacy
+            </a>
+          </li>
+          <li class="list-group-item bg-dark text-white border-light">
+            <a routerLink="/epr" class="text-decoration-none text-white stretched-link">
+              EPR Compliance
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3 py-3">
+
+        <div class="h6">Customer Care</div>
+        <hr />
+         +1800 100 1000
+        <br />
+        support@quillingartist.com
+      </div>
+    </div>
+  </div>
+</footer>

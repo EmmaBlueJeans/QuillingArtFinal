@@ -1,0 +1,23 @@
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of service.filteredProducts$ | async">
+        <mat-card class="mat-elevation-z4" >
+          <mat-card-header>
+            <mat-card-title>{{product.name}}</mat-card-title>
+          </mat-card-header>
+          <a className="nav-link" routerLink="/detail/{{product._id}}">
+            <img className="small" src="assets/{{product.image}}" alt="product" />
+            </a>
+          <mat-card-content>
+            <p>
+                ${{product.price}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    </div>
